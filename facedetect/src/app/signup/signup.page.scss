@@ -1,0 +1,32 @@
+.str{
+    text-align: center;
+    font-family: sans-serif;
+    display:block;
+}
+
+.img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.button{
+        
+    text-align: center;
+    color:black;
+    font-size: 12px;
+    border: 2px solid blueviolet;
+    border-radius: 30px;
+    width: 75%;
+    height: 9%;
+    background-color: white;
+    opacity: 0.9;
+    margin: auto;
+    display: block;
+}
+
+.button:hover {opacity: 1;
+                background: #703FE1;
+                color:white;
+               }

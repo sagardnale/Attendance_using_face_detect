@@ -1,0 +1,42 @@
+
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title ><ion-icon name="arrow-back" routerLink="/home"></ion-icon>&nbsp;Sign-Up</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-img [src]='second' class='img'></ion-img>
+  <br>
+      <div>
+          <ion-item >
+          <ion-input placeholder="Organisation"   ></ion-input>
+          <ion-select [(ngModel)]="organisationname" (ionChange)="GetOrgname()">
+            <ion-select-option *ngFor="let new_organisation of organisations" >{{new_organisation.organisation_name}}</ion-select-option>
+            </ion-select>
+      </ion-item>
+      </div>
+      <div *ngIf=this.changeorgid>
+      <ion-item >
+        <ion-input placeholder="User Type" ></ion-input>
+        <ion-select [(ngModel)]="usertype" (ionChange)="GetUsertype()"> 
+          <ion-select-option *ngFor="let new_usertype of usertypes">{{new_usertype.user_type}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      </div>
+      <div>  
+      <ion-item *ngIf=this.changeusertypeid>
+        <ion-input placeholder="Id" ></ion-input>
+        <ion-select [(ngModel)]="id" (ionChange)="GetId()">
+          <ion-select-option *ngFor="let new_id of ids">{{new_id.id}}</ion-select-option>
+          </ion-select>
+      </ion-item>
+      </div>
+      <br>
+  <br>
+  
+<ion-button   shape="round" class="button" (click)="data()"routerLink="/registerface">Next&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="arrow-forward"></ion-icon></ion-button>
+
+
+</ion-content>

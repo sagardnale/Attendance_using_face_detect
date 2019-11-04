@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title><ion-icon name="arrow-back" routerLink="/lastfaceregister"></ion-icon>&nbsp;Setup-Pin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-img [src]="setpin" class="img"></ion-img>
+    
+    <ion-label class="str" >{{str1}}</ion-label>
+  
+    <ion-label class="str">{{str2}}</ion-label>
+    <div>
+      <ion-input type="password"  placeholder="Pin of 4 digit" maxlength="4" [(ngModel)]="takepin1"  minlength="4"></ion-input>
+    </div>
+  
+    <div *ngIf="this.takepin1">
+    <ion-input type="password"  placeholder="Conform Pin" id="pin" maxlength="4" [(ngModel)]="takepin2" minlength="4"></ion-input>
+    </div>
+  
+  
+  </ion-list>
+  
+      <ion-button  shape="round" class="button" (click)="ValidatePin()" routerLink="/finalizesetup">Done</ion-button>
+      
+      
+  
+</ion-content>

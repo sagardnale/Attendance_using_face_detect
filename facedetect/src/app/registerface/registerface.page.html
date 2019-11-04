@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title><ion-icon name="arrow-back" routerLink="/signup"></ion-icon>&nbsp;Register-Face</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img [src]="third" class="img"></ion-img>
+    <br>
+    <ion-label class="str">{{str1}}</ion-label>
+    <ion-label class="str">{{str2}}</ion-label>
+    <br>
+    <br>
+    <br>
+  <ion-button shape="round" class="button" (click)="StoreLeftSidePhoto()" routerLink="/leftsideface"> Continue&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="arrow-forward"></ion-icon></ion-button>
+  
+</ion-content>
